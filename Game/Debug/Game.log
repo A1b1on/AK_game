@@ -1,8 +1,11 @@
 ﻿  Entry.cpp
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(17,13): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(43,43): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(42,14): warning C4101: temp2: неиспользованная локальная переменная
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(42,21): warning C4101: temp3: неиспользованная локальная переменная
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(42,28): warning C4101: temp4: неиспользованная локальная переменная
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(42,8): warning C4101: temp: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(8,13): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(34,43): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(33,14): warning C4101: temp2: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(33,21): warning C4101: temp3: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(33,28): warning C4101: temp4: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(33,8): warning C4101: temp: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(66,30): warning C4114: Множественное использование одного и того же квалификатора типа.
+  Main_Window.cpp
+  Создание кода...
   Game.vcxproj -> C:\Users\muzyk\source\repos\Game\Debug\Game.exe
