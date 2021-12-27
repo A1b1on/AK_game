@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code style</title>
+</head>
+<body>
+
+	<div style="height: 10%; background-color: #2241F0; color: #FFFFFF; ">
+		<span>Document: code style</span>
+	</div>
+	<h1>Именование переменных</h1>
+	<li style="font-weight: bold;">
+		Имена
+	</li>
+	<span style = "margin-left: 5%;">
+		Имена должны содержать развернутое понятное описание переменной, без русских названий, без жаргонов, без лишних сокращений, если 
+		имя содержит несколько слов отделять их нижним_подчеркиваем.
+	</span>
+	<table style=" color: white;">
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #33FF33;"> window_handler </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> okonii_obrabotchik </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> winHadler </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> wndhdlr </td>
+		</tr>
+	</table>
+	<br><br>
+
+	<li style="font-weight: bold;">
+		Именнование констант
+	</li>
+	<span style = "margin-left: 5%;">
+		Имена констант писать ЗАГЛАВНЫМИ БУКВАМИ.
+	</span>
+	<table style=" color: white;">
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #33FF33;"> TITLE_HEIGHT </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> title_const </td>
+		</tr>
+	</table>
+	<br><br>
+	<li style="font-weight: bold;">
+		Именнование глобальных переменных
+	</li>
+	<span style = "margin-left: 5%;">
+		Имена глобальных переменных начинаються с Заглавной буквы, остальные слова в имени в зависимости от граматики.
+	</span>
+	<table style=" color: white;">
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #33FF33;"> Global_variable </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> global_var </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> global_VAR </td>
+		</tr>
+	</table>
+	<br><br>
+	<li style="font-weight: bold;">
+		Именнование локальных переменных
+	</li style="font-weight: bold;">
+	<span style = "margin-left: 5%;">
+		Имена локальных переменных начинаються с прописной(маленькой) буквы, остальные слова в имени в зависимости от граматики.
+	</span>
+	<table style=" color: white;">
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #33FF33;"> window_handler </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> winHadler </td>
+		</tr>
+	</table>
+	<br><br>
+	<li style="font-weight: bold;">
+		Именнование параметров функции
+	</li>
+	<span style = "margin-left: 5%;">
+		Имена передаваемых параметров функций начианються с нижнего подчеркивания.
+	</span>
+	<table style=" color: white;">
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #33FF33;"> _window_handler </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> window_handler </td>
+		</tr>
+	</table>
+	<br><br>
+	<li style="font-weight: bold;">
+		Именнование полей класса
+	</li>
+	<span style = "margin-left: 5%;">
+		Имена полей класса начинаються с m_ ( означает member ), если поля статические то также как глобальные переменные.
+	</span>
+	<table style=" color: white;">
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #33FF33;"> m_window_handler </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> window_handler </td>
+		</tr>
+	</table>
+	<br><br>
+	<li style="font-weight: bold;">
+		Именнование функций и методов
+	</li>
+	<span style = "margin-left: 5%;">
+		Имена функций и методов с Заглавной буквы и между словами не имеют отступов, каждое следующее слово с Заглавной буквы.
+	</span>
+	<table style=" color: white;">
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #33FF33;"> MyFunctionDestroyer </td>
+		</tr>
+		<tr>
+			<td style = " padding: 5px; border: 2px solid black; background-color: #FF3333;"> my_functionDestroyer </td>
+		</tr>
+	</table>
+	<br><br>
+	<li style="font-weight: bold;">
+		Именнование классов и пространств
+	</li>
+	<span style = "margin-left: 5%;">
+		Каждый отдельный модуль имеет свое пространство имен которое создается по правилу, пример File Manager = f-file mng-manager -> fmng. Имена классов Также как функции и методы.
+	</span>
+	<br><br>
+	<br>
+<br>
+	<table style= "border: 2px solid black;">
+		<td>		
+			<pre>
+	FileManager::FileManager(const char* vs_file, const char* fs_file) : 
+	_vertex_shader_code(NULL), _fragment_shader_code(NULL)\
+	{
+		this->_vertex_shader_file_path = (char*)malloc(sizeof(char) * (strlen(vs_file) + 1));
+		if (this->_vertex_shader_file_path)
+			strcpy(this->_vertex_shader_file_path, vs_file);
+		this->_fragment_shader_file_path = (char*)malloc(sizeof(char) * (strlen(fs_file) + 1));
+		if (this->_fragment_shader_file_path)
+			strcpy(this->_fragment_shader_file_path, vs_file);
+	}
+			</pre>
+		</td>
+	</table>
+	<hr>
+	<h1>Скобочки</h1>
+	<li style="font-weight: bold;">
+		Фигурные
+	</li>
+	<span style = "margin-left: 5%;">
+		Фигурные скобки стаяться на тойже сроке после кона выражения, исключение пустые скобки.
+	</span>
+	<table style= "border: 2px solid black;">
+		<td>		
+<pre>
+if( condition ) {
+			
+} else {
+
+}
+
+MyClass::MyClass()
+{}
+</pre>
+		</td>
+	</table>
+	<li style="font-weight: bold;">
+		Конструктор иниициализации
+	</li>
+	<span style = "margin-left: 5%;">
+		Начинаются со следующей строчки.
+	</span>
+	<table style= "border: 2px solid black;">
+		<td>		
+<pre>
+MyClass::MyClass(int _a, int _b, int _c)
+: m_a(_a), m_b(b), m_c(c) 
+{}
+</pre>
+		</td>
+	</table>
+
+<hr>
+<h1>Сепараторы</h1>
+</body>
+<span style = "margin-left: 5%;">
+		Отделяют логические части в файле реализации. Пример:
+	</span>
+		<table style= "border: 2px solid black;">
+		<td>		
+<pre>
+//####################################### Rendering #################################################
+
+</pre>
+		</td>
+	</table>
+</html>
