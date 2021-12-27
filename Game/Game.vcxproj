@@ -72,23 +72,27 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glfw-3.3.2.bin.WIN64\include\GLFW;C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
+    <ReferencePath>C:\Users\muzyk\source\repos\Game\Game;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glfw-3.3.2.bin.WIN64\include\GLFW;C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
+    <ReferencePath>C:\Users\muzyk\source\repos\Game\Game;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glfw-3.3.2.bin.WIN64\include\GLFW;C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
+    <ReferencePath>C:\Users\muzyk\source\repos\Game\Game;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glfw-3.3.2.bin.WIN64\include\GLFW;C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
+    <ReferencePath>C:\Users\muzyk\source\repos\Game\Game;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -98,11 +102,15 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenGL32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;OpenGL32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -115,13 +123,17 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenGL32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;OpenGL32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -132,11 +144,15 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenGL32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;OpenGL32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -149,23 +165,31 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenGL32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;OpenGL32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="Filesystem_manager\File_System.cpp" />
+    <ClCompile Include="Render_manager\Render_Manager.cpp" />
     <ClCompile Include="Window_manager\Main_Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Filesystem_manager\File_System.h" />
+    <ClInclude Include="Render_manager\Render_Manager.h" />
     <ClInclude Include="Window_manager\Main_Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

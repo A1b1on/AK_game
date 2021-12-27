@@ -1,11 +1,39 @@
 ﻿  Entry.cpp
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(8,13): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(34,43): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(33,14): warning C4101: temp2: неиспользованная локальная переменная
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(33,21): warning C4101: temp3: неиспользованная локальная переменная
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(33,28): warning C4101: temp4: неиспользованная локальная переменная
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(33,8): warning C4101: temp: неиспользованная локальная переменная
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(66,30): warning C4114: Множественное использование одного и того же квалификатора типа.
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(11,13): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(37,43): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(36,14): warning C4101: temp2: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(36,21): warning C4101: temp3: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(36,28): warning C4101: temp4: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(36,8): warning C4101: temp: неиспользованная локальная переменная
+C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(75,30): warning C4114: Множественное использование одного и того же квалификатора типа.
+  File_System.cpp
+  Render_Manager.cpp
   Main_Window.cpp
   Создание кода...
-  Game.vcxproj -> C:\Users\muzyk\source\repos\Game\Debug\Game.exe
+Entry.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewUseProgram в функции __catch$_SDL_main$0.
+Entry.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewBindVertexArray в функции __catch$_SDL_main$0.
+Render_Manager.obj : error LNK2001: неразрешенный внешний символ __imp____glewBindVertexArray.
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewBindBuffer в функции "public: bool __thiscall rmng::RenderManager::CompileObjects(void)" (?CompileObjects@RenderManager@rmng@@QAE_NXZ).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewBufferData в функции "public: bool __thiscall rmng::RenderManager::CompileObjects(void)" (?CompileObjects@RenderManager@rmng@@QAE_NXZ).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewDeleteBuffers в функции "public: void __thiscall rmng::RenderManager::DeleteObjects(void)" (?DeleteObjects@RenderManager@rmng@@QAEXXZ).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewGenBuffers в функции "public: bool __thiscall rmng::RenderManager::CompileObjects(void)" (?CompileObjects@RenderManager@rmng@@QAE_NXZ).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewAttachShader в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewCompileShader в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewCreateProgram в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewCreateShader в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewDeleteShader в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewEnableVertexAttribArray в функции "public: bool __thiscall rmng::RenderManager::CompileObjects(void)" (?CompileObjects@RenderManager@rmng@@QAE_NXZ).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewGetProgramInfoLog в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewGetProgramiv в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewGetShaderInfoLog в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewGetShaderiv в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewLinkProgram в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewShaderSource в функции "public: bool __thiscall rmng::RenderManager::CompileShaders(char const *,char const *)" (?CompileShaders@RenderManager@rmng@@QAE_NPBD0@Z).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewVertexAttribPointer в функции "public: bool __thiscall rmng::RenderManager::CompileObjects(void)" (?CompileObjects@RenderManager@rmng@@QAE_NXZ).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewDeleteVertexArrays в функции "public: void __thiscall rmng::RenderManager::DeleteObjects(void)" (?DeleteObjects@RenderManager@rmng@@QAEXXZ).
+Render_Manager.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp____glewGenVertexArrays в функции "public: bool __thiscall rmng::RenderManager::CompileObjects(void)" (?CompileObjects@RenderManager@rmng@@QAE_NXZ).
+Main_Window.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glewInit@0 в функции "public: bool __thiscall wmng::MainWindow::Init_GL(void)" (?Init_GL@MainWindow@wmng@@QAE_NXZ).
+C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64\glew32s.lib : warning LNK4272: тип компьютера библиотеки "x64" конфликтует с типом целевого компьютера "x86"
+C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64\SDL2.lib : warning LNK4272: тип компьютера библиотеки "x64" конфликтует с типом целевого компьютера "x86"
+C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64\SDL2main.lib : warning LNK4272: тип компьютера библиотеки "x64" конфликтует с типом целевого компьютера "x86"
+C:\Users\muzyk\source\repos\Game\Debug\Game.exe : fatal error LNK1120: неразрешенных внешних элементов: 22

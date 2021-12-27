@@ -10,31 +10,30 @@ MainWindow::MainWindow() :
 {
 }
 
-MainWindow::MainWindow(const char* title, size_t w, size_t h) :
+MainWindow::MainWindow(const char* title, const size_t& w, const size_t & h) :
 	MainWindow(title, w, h, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL)
 {	
 }
 
-MainWindow::MainWindow(const char* title, size_t w, size_t h, size_t x, size_t y) :
+MainWindow::MainWindow(const char* title, const size_t& w, const size_t& h, const size_t& x, const size_t& y) :
 	MainWindow(title, w, h, x, y, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL)
 {
 }
 
-MainWindow::MainWindow(const char* title, size_t w, size_t h, size_t x, size_t y, Uint32 flags) :
-	_window(nullptr), _glcontext(NULL),
-	_window_height(h), _window_width(w),
-	_window_x_position(x), _window_y_position(y),
-	_window_flags(flags)
+MainWindow::MainWindow(const char* title, const size_t& w, const size_t& h, const size_t& x, const size_t& y, const Uint32& flags) :
+	m_window(nullptr), m_glcontext(NULL),
+	m_window_height(h), m_window_width(w),
+	m_window_x_position(x), m_window_y_position(y),
+	m_window_flags(flags)
 {
-	this->_window_title = (char*)malloc(sizeof(char) * (strlen(title) + 1));
-	if (this->_window_title)
-		strcpy(this->_window_title, title);
+	this->m_window_title = new char[ (strlen(title) + 1)];
+	if (this->m_window_title)
+		strcpy(this->m_window_title, title);
 }
 
 //###################################### Initizialization ################################################
 
-bool MainWindow::Init_SDL() 
-{
+bool MainWindow::InitSDL() {
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
 		std::string _error = "Unable to init SDL, error: ";
 		_error += SDL_GetError();
@@ -44,23 +43,21 @@ bool MainWindow::Init_SDL()
 	return 1;
 }
 
-bool MainWindow::Init_GL() 
-{
+bool MainWindow::InitGL()  {
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 5);
 	SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 6);
 	SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 5);
-
+	glewInit();
 	return 1;
 }
 
-bool MainWindow::Window()
-{
-	this->_window = SDL_CreateWindow(this->_window_title,
-		this->_window_x_position, this->_window_y_position,
-		this->_window_width, this->_window_height,
-		this->_window_flags);
-	if (this->_window == NULL) {
+bool MainWindow::Window() {
+	this->m_window = SDL_CreateWindow(this->m_window_title,
+		this->m_window_x_position, this->m_window_y_position,
+		this->m_window_width, this->m_window_height,
+		this->m_window_flags);
+	if (this->m_window == NULL) {
 		std::string _error = "SDL window couldnt create: error: ";
 		_error += SDL_GetError();
 		throw std::runtime_error(_error.c_str());
@@ -69,106 +66,65 @@ bool MainWindow::Window()
 	return 1;
 }
 
-bool MainWindow::GL_context() {
-	if (this->_window == NULL) {
+bool MainWindow::GLContext() {
+	if (this->m_window == NULL) {
 		throw std::runtime_error("GL context couldnt created");
 		return 0;
 	}	
-	this->_glcontext = SDL_GL_CreateContext(this->_window);
+	this->m_glcontext = SDL_GL_CreateContext(this->m_window);
 	return 1;
 }
 
 //####################################### Return methods #################################################
 
-size_t MainWindow::window_height() const 
-{
-	return this->_window_height;
+size_t MainWindow::WindowHeight() const {
+	return this->m_window_height;
 }
 
-size_t MainWindow::window_width() const
-{
-	return this->_window_width;
+size_t MainWindow::WindowWidth() const {
+	return this->m_window_width;
 }
 
-size_t MainWindow::x_position() const
-{
-	return this->_window_x_position;
+size_t MainWindow::XPosition() const {
+	return this->m_window_x_position;
 }
 
-size_t MainWindow::y_position() const
-{
-	return this->_window_y_position;
+size_t MainWindow::YPosition() const {
+	return this->m_window_y_position;
 }
 
-const char* MainWindow::window_title() const
-{
-	return this->_window_title;
+const char* MainWindow::WindowTitle() const {
+	return this->m_window_title;
 }
 
 //####################################### Rendering #################################################
 
-void MainWindow::Display()
-{
-	SDL_GL_SwapWindow(this->_window);
-}
-//todo: remove this
-void drawCube(float xrf, float yrf, float zrf) {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-	glLoadIdentity();
-	glTranslatef(0.0f, 0.0f, -7.0f);	// Сдвинуть вглубь экрана
-
-	glRotatef(xrf, 1.0f, 0.0f, 0.0f);	// Вращение куба по X, Y, Z
-	glRotatef(yrf, 0.0f, 1.0f, 0.0f);	// Вращение куба по X, Y, Z
-	glRotatef(zrf, 0.0f, 0.0f, 1.0f);	// Вращение куба по X, Y, Z
-
-	glBegin(GL_QUADS);		// Рисуем куб
-
-	glColor3f(0.0f, 1.0f, 0.0f);		// Синяя сторона (Верхняя)
-	glVertex3f(1.0f, 1.0f, -1.0f);		// Верхний правый угол квадрата
-	glVertex3f(-1.0f, 1.0f, -1.0f);		// Верхний левый
-	glVertex3f(-1.0f, 1.0f, 1.0f);		// Нижний левый
-	glVertex3f(1.0f, 1.0f, 1.0f);		// Нижний правый
-
-	glColor3f(1.0f, 0.5f, 0.0f);		// Оранжевая сторона (Нижняя)
-	glVertex3f(1.0f, -1.0f, 1.0f);	// Верхний правый угол квадрата
-	glVertex3f(-1.0f, -1.0f, 1.0f);	// Верхний левый
-	glVertex3f(-1.0f, -1.0f, -1.0f);	// Нижний левый
-	glVertex3f(1.0f, -1.0f, -1.0f);	// Нижний правый
-
-	glColor3f(1.0f, 0.0f, 0.0f);		// Красная сторона (Передняя)
-	glVertex3f(1.0f, 1.0f, 1.0f);		// Верхний правый угол квадрата
-	glVertex3f(-1.0f, 1.0f, 1.0f);		// Верхний левый
-	glVertex3f(-1.0f, -1.0f, 1.0f);		// Нижний левый
-	glVertex3f(1.0f, -1.0f, 1.0f);		// Нижний правый
-
-	glColor3f(1.0f, 1.0f, 0.0f);			// Желтая сторона (Задняя)
-	glVertex3f(1.0f, -1.0f, -1.0f);	// Верхний правый угол квадрата
-	glVertex3f(-1.0f, -1.0f, -1.0f);	// Верхний левый
-	glVertex3f(-1.0f, 1.0f, -1.0f);	// Нижний левый
-	glVertex3f(1.0f, 1.0f, -1.0f);	// Нижний правый
-
-	glColor3f(0.0f, 0.0f, 1.0f);			// Синяя сторона (Левая)
-	glVertex3f(-1.0f, 1.0f, 1.0f);	// Верхний правый угол квадрата
-	glVertex3f(-1.0f, 1.0f, -1.0f);	// Верхний левый
-	glVertex3f(-1.0f, -1.0f, -1.0f);	// Нижний левый
-	glVertex3f(-1.0f, -1.0f, 1.0f);	// Нижний правый
-
-	glColor3f(1.0f, 0.0f, 1.0f);			// Фиолетовая сторона (Правая)
-	glVertex3f(1.0f, 1.0f, -1.0f);	// Верхний правый угол квадрата
-	glVertex3f(1.0f, 1.0f, 1.0f);	// Верхний левый
-	glVertex3f(1.0f, -1.0f, 1.0f);	// Нижний левый
-	glVertex3f(1.0f, -1.0f, -1.0f);	// Нижний правый
-
-	glEnd();	// Закончили квадраты
-
+void MainWindow::Display() {
+	SDL_GL_SwapWindow(this->m_window);
 }
 
-void MainWindow::Render()
-{
-	this->x -= 0.5;
-	this->y -= 0.5;
-	this->z -= 0.5;
-	drawCube(this->x, this->y, this->z);
+void MainWindow::Render() {
 	glFlush();
+}
+
+//####################################### GET #################################################
+
+MainWindow* MainWindow::get()  {
+	MainWindow* _window = new MainWindow();
+	return _window;
+}
+
+MainWindow* MainWindow::get(const char* title, const size_t& w, const size_t& h)  {
+	MainWindow* _window = new MainWindow(title, w, h);
+	return _window;
+}
+
+MainWindow* MainWindow::get(const char* title, const size_t& w, const size_t& h, const size_t& x, const size_t& y) {
+	MainWindow* _window = new MainWindow(title, w, h, x, y);
+	return _window;
+}
+
+MainWindow* MainWindow::get(const char* title, const size_t& w, const size_t& h, const size_t& x, const size_t& y, const Uint32& flags) {
+	MainWindow* _window = new MainWindow(title, w, h, x, y, flags);
+	return _window;
 }
