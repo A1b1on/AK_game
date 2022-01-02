@@ -72,27 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
-    <ReferencePath>C:\Users\muzyk\source\repos\Game\Game;$(ReferencePath)</ReferencePath>
+    <IncludePath>D:\AK_game\libs\sdl2\SDL2-2.0.18\include;D:\AK_game\libs\opengl\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\AK_game\libs\opengl\glew-2.1.0\lib\Release\x64;D:\AK_game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
-    <ReferencePath>C:\Users\muzyk\source\repos\Game\Game;$(ReferencePath)</ReferencePath>
+    <IncludePath>D:\AK_game\libs\sdl2\SDL2-2.0.18\include;D:\AK_game\libs\opengl\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\AK_game\libs\opengl\glew-2.1.0\lib\Release\x64;D:\AK_game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
-    <ReferencePath>C:\Users\muzyk\source\repos\Game\Game;$(ReferencePath)</ReferencePath>
+    <IncludePath>D:\AK_game\libs\sdl2\SDL2-2.0.18\include;D:\AK_game\libs\opengl\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\AK_game\libs\opengl\glew-2.1.0\lib\Release\x64;D:\AK_game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\include\GL;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\muzyk\source\repos\Game\libs\opengl\glew-2.1.0\lib\Release\x64;C:\Users\muzyk\source\repos\Game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
-    <ReferencePath>C:\Users\muzyk\source\repos\Game\Game;$(ReferencePath)</ReferencePath>
+    <IncludePath>D:\AK_game\libs\sdl2\SDL2-2.0.18\include;D:\AK_game\libs\opengl\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\AK_game\libs\opengl\glew-2.1.0\lib\Release\x64;D:\AK_game\libs\sdl2\SDL2-2.0.18\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
