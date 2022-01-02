@@ -1,3 +1,3 @@
 ﻿  Entry.cpp
-C:\Users\muzyk\source\repos\Game\Game\Entry.cpp(20,32): warning C4114: Множественное использование одного и того же квалификатора типа.
-  Game.vcxproj -> C:\Users\muzyk\source\repos\Game\x64\Debug\Game.exe
+D:\AK_game\Game\Entry.cpp(20,32): warning C4114: Множественное использование одного и того же квалификатора типа.
+  Game.vcxproj -> D:\AK_game\x64\Debug\Game.exe

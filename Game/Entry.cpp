@@ -25,13 +25,27 @@ int main(int argc, char* argv[]) {
 		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Start Error", _e, NULL);
 		exit(-1);
 	}
-
+	SDL_Event event;
 	bool running = true;
 
 	while (running) {
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
+		while (SDL_PollEvent (&event)) {
+			switch (event.type) {
+			case SDL_QUIT :
+				running = false;
+				break;
+			case SDL_KEYDOWN:
+				switch (event.key.keysym.sym) {
+				case SDLK_ESCAPE:
+					running = false; 
+					break; 
+				}
+				break;
+			}
 
+		}
 		// Рисуем наш первый треугольник
 		glUseProgram(render_manager->m_shader_program);
 		glBindVertexArray(render_manager->m_VAO); 
